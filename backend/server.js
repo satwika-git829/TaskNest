@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect MongoDB (Storage layer)
-mongoose.connect('mongodb+srv://satwikabandakavi_db_user:Mongo123@cluster0.7b9o3cg.mongodb.net/tasknest', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect();
 
 const Task = mongoose.model('Task', {title: String, description: String, dueDate: Date, priority: String, tag: String});
 const FocusSession = mongoose.model('FocusSession', {start: Date, end: Date, duration: Number});
